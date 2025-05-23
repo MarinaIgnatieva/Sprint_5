@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions
 
 
 from locators import *
+from urls import MAIN_PAGE_URL
 
 
 class TestConstructor:
@@ -20,7 +21,7 @@ class TestConstructor:
 
         assert driver.find_element(By.XPATH, BUTTON_PLACE_ORDER).text == 'Оформить заказ'
 
-        driver.quit()
+
     #тест перехода в конструктор по клику на логотип Stellar Burgers
     def test_transition_by_click_on__logo(self, driver, user_login):
 
@@ -32,7 +33,7 @@ class TestConstructor:
 
         assert driver.find_element(By.XPATH, BUTTON_PLACE_ORDER).text == 'Оформить заказ'
 
-        driver.quit()
+
 
     #тест перехода к разделу Соус
     #"current" in driver.find_element(lskdjflksdjfkdjf).get_attribute("class") and "current" not in
@@ -47,7 +48,7 @@ class TestConstructor:
                  and "current" not in driver.find_element(By.XPATH, SECTION_FILLINGS).get_attribute("class")
                  )
 
-        driver.quit()
+
 
 
     #тест перехода к разделу Булки
@@ -63,7 +64,7 @@ class TestConstructor:
                  and "current" not in driver.find_element(By.XPATH, SECTION_FILLINGS).get_attribute("class")
                  )
 
-        driver.quit()
+
 
 
         #тест перехода к разделу Начинки
@@ -78,5 +79,5 @@ class TestConstructor:
                 and "current" not in driver.find_element(By.XPATH, SECTION_SAUCE).get_attribute("class")
         )
 
-        driver.quit()
+
 

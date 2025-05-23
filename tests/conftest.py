@@ -8,11 +8,14 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from helper import generate_email, generate_password
 from locators import *
+from urls import MAIN_PAGE_URL, Registration_URL
 
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def driver():
-    return webdriver.Chrome()
+    driver = webdriver.Chrome()
+    yield driver
+    driver.quit()
 
 
 @pytest.fixture

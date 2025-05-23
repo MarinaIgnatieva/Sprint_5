@@ -4,8 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
-from locators import Registration_URL, NAME_REGISTRATION, EMAIL_REGISTRATION, PASSWORD_REGISTRATION, \
+from locators import  NAME_REGISTRATION, EMAIL_REGISTRATION, PASSWORD_REGISTRATION, \
     BUTTON_REGISTRATION, LOGIN_FORM
+from urls import Registration_URL
 
 
 class TestRegistration:
@@ -28,7 +29,7 @@ class TestRegistration:
 
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
-        driver.quit()
+
 
     #Тест ошибки для короткого пароля
     def test_short_password(self, driver):
@@ -47,6 +48,5 @@ class TestRegistration:
 
         assert driver.find_element(By.XPATH, "//p[text()='Некорректный пароль']")
 
-        driver.quit()
 
 

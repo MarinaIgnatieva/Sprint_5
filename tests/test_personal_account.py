@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions
 
 from locators import  BUTTON_PERSONAL_ACCOUNT, LOGIN_FORM, \
     LINK_PROFILE, BUTTON_LOGOUT
+from urls import PROFILE_URL, LOGIN_URL
 
 
 class TestPersonalAccount():
@@ -14,9 +15,9 @@ class TestPersonalAccount():
         driver.find_element(By.XPATH, BUTTON_PERSONAL_ACCOUNT).click()
         WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, LINK_PROFILE)))
 
-        assert driver.current_url == 'https://stellarburgers.nomoreparties.site/account/profile'
+        assert driver.current_url == PROFILE_URL
 
-        driver.quit()
+
 
     #тест выхода по кнопке «Выйти» в личном кабинете
     def test_logout(self, driver, user_login):
@@ -26,8 +27,7 @@ class TestPersonalAccount():
         driver.find_element(By.XPATH, BUTTON_LOGOUT).click()
         WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, LOGIN_FORM)))
 
-        assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
+        assert driver.current_url == LOGIN_URL
 
-        driver.quit()
 
 

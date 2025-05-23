@@ -1,16 +1,8 @@
-#страница с формой регистрации
-from idlelib.query import SectionName
-
-Registration_URL = "https://stellarburgers.nomoreparties.site/register"
-
 #форма регистрации
 NAME_REGISTRATION = "//label[text()='Имя']/parent::div/input"
 EMAIL_REGISTRATION = "//label[text()='Email']/parent::div/input"
 PASSWORD_REGISTRATION = "//input[@type='password']"
 BUTTON_REGISTRATION = "//button[text()='Зарегистрироваться']"
-
-#главная страница
-MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/"
 
 #форма входа в аккаунт
 LOGIN_MAIN_PAGE_BUTTON = "//button[text() = 'Войти в аккаунт']"
@@ -28,9 +20,6 @@ BUTTON_PERSONAL_ACCOUNT = "//a[@href='/account']"
 #кнопка Войти в форме регистрации
 BUTTON_LOGIN_REGISTRATION = "//a[@href='/login']"
 
-#страница восстановления пароля
-FORGOT_PASSWORD_URL = "https://stellarburgers.nomoreparties.site/forgot-password"
-
 #кнопка Войти в форме восстановления пароля
 BUTTON_LOGIN_FORGOT_PASSWORD = "//a[@href='/login']"
 
@@ -42,9 +31,6 @@ BUTTON_LOGOUT = "//button[text()='Выход']"
 
 #кнопка Конструктор
 BUTTON_CONSTRUCTOR = "//p[text()='Конструктор']"
-
-#заголовок Соберите бургер
-#HEADER_BURGER = "//h1[text()='Соберите бургер']"
 
 #логотип Stellar Burgers
 LOGO_STELLAR_BURGERS = "//div[@class='AppHeader_header__logo__2D0X2']/a"
